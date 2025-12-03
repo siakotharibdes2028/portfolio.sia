@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Portfolio</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #0f0f0f;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+      }
+      nav h1 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      nav a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #7d5fff;
+      }
+
+      /* HERO */
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+      }
+      .hero-text h2 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .hero-text p {
+        margin-top: 15px;
+        font-size: 20px;
+        opacity: 0.8;
+        max-width: 500px;
+      }
+      .hero-text button {
+        margin-top: 25px;
+        padding: 14px 30px;
+        background: #7d5fff;
+        border: none;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .hero-text button:hover {
+        background: #a287ff;
+      }
+
+      .hero-img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #7d5fff, #05c7f2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+      }
+
+      /* SECTION TITLE */
+      .section {
+        padding: 100px 80px;
+      }
+      .section h3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      /* PROJECTS */
+      .projects {
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .project-card {
+        background: #1b1b1b;
+        color: #fffdfb;
+        padding: 25px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+        width: 90%;
+      }
+      a{
+        text-decoration: none;
+      }
+      .project-card:hover {
+        transform: translateY(-10px);color: #ff6f00;
+      }
+      .project-card h4 {
+        font-size: 24px;
+        margin-bottom: 10px;color: #ffffff;
+      }
+      .project-card p {
+        font-size: 15px;
+        opacity: 0.8;
+      }
+
+      /* ABOUT SECTION */
+      .about-wrapper {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+      .about-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+        object-fit: cover;
+        border: 3px solid #7d5fff;
+      }
+      .about-text {
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 600px;
+      }
+
+      /* CONTACT FORM */
+      .contact-box {
+        max-width: 500px;
+        background: #1b1b1b;
+        padding: 40px;
+        border-radius: 20px;
+      }
+      .contact-box label {
+        font-size: 15px;
+        opacity: 0.8;
+      }
+      .contact-box input,
+      .contact-box textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: #2c2c2c;
+        color: #fff;
+      }
+      .contact-box button {
+        margin-top: 15px;
+        padding: 14px 25px;
+        background: #7d5fff;
+        border: none;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.7;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <h1>Sia</h1>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- DARK MODE TOGGLE -->
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h2>Hi, I'm Sia <br />Graphic Designer</h2>
+        <p>I build clean, modern and functional designs</p>
+        <button onclick="scrollToProjects()">Explore Projects</button>
+      </div>
+      <div class="hero-img">WELCOME</div>
+    </section>
+    <section class="section" id="about">
+      <h3>
+        <a href="project1.html" style="text-decoration: none; color: inherit"
+          >About Me</a
+        >
+      </h3>
+      <div class="about-wrapper">
+        <img src="sia.jpg" class="about-img" />
+        <p class="about-text">
+          I'm a passionate graphic designer who loves turning ideas into
+          functional and beautiful digital products. I specialize in creative
+          design, branding, and digital illustration. I enjoy learning new
+          technologies and continuously improving my skills.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+      <h3>
+        <a href="project1.html" style="text-decoration: none; color: inherit"
+          >Skills</a
+        >
+      </h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px">
+        <span
+          style="
+            padding: 12px 20px;
+            background: #ff6f00;
+            width: 20%;
+            border-radius: 10px;
+          "
+          >Adobe Photoshop</span
+        >
+        <span
+          style="
+            padding: 12px 20px;
+            background: #ff6f00;
+            width: 20%;
+            border-radius: 10px;
+          "
+          >Adobe Illustrator</span
+        >
+        <span
+          style="
+            padding: 12px 20px;
+            background: #ff6f00;
+            width: 20%;
+            border-radius: 10px;
+          "
+          >Adobe Indesign</span
+        >
+        <span
+          style="
+            padding: 12px 20px;
+            background: #ff6f00;
+            width: 20%;
+            border-radius: 10px;
+          "
+          >Canva</span
+        >
+        <span
+          style="
+            padding: 12px 20px;
+            background: #ff6f00;
+            width: 20%;
+            border-radius: 10px;
+          "
+          >Figma</span
+        >
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <h3>
+        <a href="project1.html" style="text-decoration: none; color: inherit"
+          >My Projects</a
+        >
+      </h3>
+      <div class="projects">
+        <div
+          class="project-card"
+          onclick="window.location.href='ecommerce.html'"
+          style="cursor: pointer"
+        >
+          <a
+            href="wine label poster-01.jpg"
+          ><h4>Posters</h4>
+
+          <p></p>
+        </div>
+
+        <div class="project-card">
+          <a href="wine label 1-01.png">
+          <h4>Packaging</h4>
+          <p></p>
+        </div>
+
+        <div class="project-card">
+          <a href="refind logo 2-07.png">
+          <h4>Logo</h4>
+          <p></p>
+        </div>
+
+        <div class="project-card">
+          <a href="refind logo 3-01.jpg">
+          <h4>Branding</h4>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <h3>
+        <a href="project1.html" style="text-decoration: none; color: inherit"
+          >Contact Me</a
+        >
+      </h3>
+      <div class="contact-box">
+        <label>Name</label>
+        <input type="text" placeholder="Your name" />
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" />
+
+        <label>Message</label>
+        <textarea rows="4" placeholder="Type something..."></textarea>
+
+        <button onclick="alert('Message Sent!')">Send Message</button>
+      </div>
+    </section>
+
+    <footer>© 2025 Sia — Advanced Portfolio Website</footer>
+
+    <script>
+      function scrollToProjects() {
+        document
+          .getElementById("projects")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <script>
+      function scrollToProjects() {
+        document
+          .getElementById("projects")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+     
+    </script>
+  </body>
+</html>
